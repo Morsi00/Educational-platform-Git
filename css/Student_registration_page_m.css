@@ -1,0 +1,322 @@
+:root {
+  --primary-color: #0ea5e9; /* أزرق أساسي */
+  --secondary-color: #2ecc71; /* أخضر */
+  --accent-color: #e74c3c; /* أحمر */
+  --background-color: #f4f4f4; /* رمادي فاتح */
+  --text-color: #333333; /* أسود غامق */
+}
+
+
+/* Container */
+
+
+.form-container {
+  max-width: 900px;
+  margin: 120px auto;
+  background: #f9fafb; /* لون فاتح بدل الغامق */
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: 14px;
+  color: #4b5563; /* لون نص غامق على الفاتح */
+  margin-bottom: 20px;
+}
+
+.subtitle span {
+  color:var(--primary-color) ;/* لون أصفر داكن */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Grid */
+.grid-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+@media (min-width: 768px) {
+  .grid-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* أي عنصر عنده الكلاس .full-width ياخد العرض كله */
+  .grid-form > .full-width {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* Floating label */
+.form-group {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 25px 12px 5px 12px;
+  border: none;
+  border-bottom: 2px solid #3b82f6; /* أزرق فاتح */
+  background: transparent;
+  color: #111827; /* نص غامق */
+  font-size: 16px;
+  outline: none;
+  position: relative;
+  z-index: 2;
+}
+
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #6b7280; /* رمادي متوسط */
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 3;
+}
+
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: 10px;
+  right: 8px;
+  font-size: 12px;
+  color:var(--primary-color);
+  background: #f9fafb;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* Animated background */
+.bg-anim {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 130, 246, 0.2);
+  z-index: 4;
+  transform: translateX(100%);
+  transition: transform 0.6s ease;
+}
+
+.form-group input:focus ~ .bg-anim {
+  transform: translateX(-100%);
+}
+
+.form-group input:not(:focus) ~ .bg-anim {
+  transform: translateX(100%);
+}
+
+/* Button */
+button {
+  margin-top: 30px;
+  grid-column: 1 / -1;
+  padding: 14px;
+  background: #3b82f6;
+  border: none;
+
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--primary-color);
+  color: #111827;
+}
+
+/* Select */
+.form-group select {
+  width: 100%;
+  padding: 25px 12px 5px 12px;
+  border: none;
+  border-bottom: 2px solid #3b82f6;
+  background: transparent;
+  color: #111827;
+  font-size: 16px;
+  outline: none;
+  position: relative;
+  z-index: 2;
+  appearance: none;
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: #f9fafb;
+  color: #111827;
+  padding: 10px;
+}
+
+.form-group select:focus + label,
+.form-group select:valid + label {
+  top: 4px;
+  right: 8px;
+  font-size: 12px;
+  color:var(--primary-color);
+  background: #f9fafb;
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+/* Password toggle */
+.password-group .toggle-password {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #3b82f6;
+  font-size: 18px;
+  z-index: 5;
+}
+
+/* Error messages */
+.error-msg {
+  
+  display: none;
+  background-color: #f87171;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 13px;
+  margin-top: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 5;
+
+}
+
+.input-error ~ .error-msg {
+  display: block;
+}
+
+.error-msg:not(:empty) {
+  display: block;
+}
+
+/* Dark Mode */
+body.dark .form-container {
+  background: #1f2937; /* غامق */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+body.dark .subtitle {
+  color: #ccc;
+}
+
+body.dark .subtitle span {
+  color: var(--primary-color);
+}
+
+/* Inputs */
+body.dark .form-group input {
+  color: #fff;
+  border-bottom: 2px solid #38bdf8;
+  background: transparent;
+}
+
+body.dark .form-group label {
+  color: #aaa;
+}
+
+body.dark .form-group input:focus + label,
+body.dark .form-group input:not(:placeholder-shown) + label {
+  color:var(--primary-color);
+  background: #1f2937;
+}
+
+/* Animated background */
+body.dark .bg-anim {
+  background: rgba(56, 189, 248, 0.2);
+}
+
+/* Button */
+/* زرار إنشاء الحساب فقط في Dark Mode */
+body.dark .submit22 {
+  background: #38bdf8;
+  color: #111827;
+  transition: 0.3s;
+  border-radius: 10px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+body.dark .submit22:hover {
+  background:var(--primary-color);
+  color: #000;
+}
+
+/* Select */
+body.dark .form-group select {
+  color: #fff;
+  border-bottom: 2px solid #38bdf8;
+  background: transparent;
+}
+
+body.dark .form-group select option {
+  background: #1f2937;
+  color: #fff;
+}
+
+body.dark .form-group select:focus + label,
+body.dark .form-group select:valid + label {
+  color:var(--primary-color);
+  background: #1f2937;
+}
+
+/* Password toggle */
+body.dark .password-group .toggle-password {
+  color: #38bdf8;
+}
+
+/* Error messages */
+body.dark .error-msg {
+  background-color: #f87171;
+  color: #fff;
+}
+
+/* السهم المخصص للأب form-group1 */
+.form-group1 {
+  position: relative;
+}
+
+/* السهم */
+.form-group1::after {
+  content: "\f107"; /* سهم من Font Awesome */
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 12px; /* لو RTL خلي السهم على اليسار */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #38bdf8;
+  pointer-events: none; /* لا يؤثر على الضغط على select */
+  z-index: 3;
+}
+
+/* لو في Dark Mode */
+body.dark .form-group1::after {
+  color:var(--primary-color);
+}
+
+/* اخفاء السهم الافتراضي */
+.form-group1 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.full-width{
+  color: #6b7280; /* رمادي متوسط */
+  font-size: 16px;
+}

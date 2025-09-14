@@ -1,0 +1,122 @@
+:root {
+  --primary-color: #0ea5e9;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --background-color: #f4f4f4;
+  --text-color: #333333;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  background-color: white;
+}
+
+#progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 4px;
+  background: linear-gradient(270deg, #ff0080, #ff8c00, #40e0d0, #007bff, #8a2be2);
+  background-size: 400% 400%;
+  animation: gradientMove 6s ease infinite;
+  z-index: 9999;
+  transition: width 0.2s ease;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+body.dark .navbar { background-color: #222; }
+
+.toggle-btn {
+  width: 70px;
+  height: 35px;
+  background: var(--primary-color);
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  color: white;
+}
+
+.toggle-circle {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 29px;
+  height: 29px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d6efd;
+  transition: all 0.3s;
+}
+
+.toggle-btn.active .toggle-circle { left: 38px; color: #0d6efd; }
+body.dark { background: #222; color: #eee; }
+
+#darkToggle.dark-btn { background-color: #555; color: white; }
+
+.loginbtn { border: var(--primary-color); background-color: var(--primary-color); }
+.loginbtn:hover { border: 1px solid var(--primary-color); background-color: white; }
+
+.btnsearch { background-color: #fff; border: none; font-size: 20px; border-radius: 4px; }
+.btnsearch:hover { background-color: #eee; }
+body.dark .btnsearch { background: #222; color: #eee; }
+body.dark .btnsearch:hover { background: #666; }
+
+.buttons-container { display: flex; gap: 6px; }
+.buttons-container .iconmenu { display: flex; font-size: 28px; }
+
+.buttomloginhome { display: none; }
+
+.buttomsmallscreen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 0;
+  background: rgba(14, 165, 233, 0.95);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  transition: height 0.4s ease;
+  z-index: 9999;
+}
+
+.buttomsmallscreen a {
+  display: block; margin: 20px 0; width: 100%;
+  font-size: 24px; text-decoration: none; color: #fff;
+  background: #0ea5e9; padding: 12px 25px;
+  border-radius: 8px; transition: 0.3s;
+}
+.buttomsmallscreen a:hover { background: #fff; color: #0ea5e9; }
+
+.close-btn {
+  position: absolute; top: 20px; left: 30px;
+  font-size: 40px; color: #fff; cursor: pointer;
+}
+.buttomsmallscreen.active { height: 100%; }
+
+@media (min-width: 768px) {
+  .buttomloginhome { display: block; }
+  .buttons-container .iconmenu { display: none; }
+}
+
+@media (min-width: 992px) {
+  .my-navbar { width: 90%; margin: auto; padding: 0 15px; }
+}

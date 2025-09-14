@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- رابط CSS الخاص بـ -->
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- Bootstrap-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><!-- icon-->
+  <link rel="stylesheet" href="./css/Student_registration_page_m.css">
+  <link rel="stylesheet" href="./css/teacher_login.css">
+
+
+  <link rel="stylesheet" href="./css/Login_page.css">
+
+  <link rel="stylesheet" href="./css/home_page.css"><!-- css home page-->
+
+
+
+
+  <!-- الملفات الخاصه با الخط -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<title>Educational platform</title>
+</head>
+<!--  -->
+
+<body class="">
+
+
+  <!-- Start Navbar -->
+
+  <nav class="navbar navbar-expand-lg shadow-sm   ">
+    <div id="progressBar"></div>
+
+    <div class=" container-fluid my-navbar ">
+
+      <div class=" d-flex align-items-center mt-2 mb-3">
+        <!-- يمين: اللوجو + Dark mode -->
+        <div class="d-flex align-items-center  ">
+          <a class="navbar-brand fw-bold " href="#">
+            <img src="./imgs/logohomepage.png" alt="Logo" width="70">
+
+          </a>
+
+
+        </div>
+
+
+        <!-- زرار التبديل -->
+        <div id="darkToggle" class="toggle-btn mx-4">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+
+          <div class="toggle-circle"> <i class="fas fa-sun"></i></div>
+        </div>
+
+      </div>
+
+
+      <!-- فورم البحث -->
+
+
+
+
+
+      <!-- شمال: الأزرار -->
+      <div class="d-flex justify-content-between align-items-center">
+
+        <div class="" style="position:relative;">
+          <button class="btnsearch p-2  " type="button">
+            <i class="fas fa-search"></i>
+          </button>
+
+          <!-- مربع البحث (مخفي في البداية) -->
+          <div class="search-box">
+            <input type="text" placeholder="اكتب للبحث..." />
+            <span class="close-search">&times;</span>
+          </div>
+        </div>
+
+        <div class="buttons-container">
+          <button class="btn loginbtn buttomloginhome">
+            تسجيل دخول
+          </button>
+
+          <button class="btn btn-outline-secondary buttomloginhome " id="create_account">
+            إنشاء حساب
+          </button>
+
+          <button class="btn btn-outline-primary buttomloginhome  loginparnt">
+            تسجيل كـ ولي أمر
+          </button>
+
+
+          <i class="fas fa-bars iconmenu"></i>
+        </div>
+      </div>
+
+    </div>
+    <div class="buttomsmallscreen ">
+
+      <span class="close-btn">&times;</span>
+      <a href="" class="login-link">تسجيل دخول</a>
+      <a href="" id="create_account_link">إنشاء حساب</a>
+      <a href="" class="parant_page">تسجيل كـ ولي أمر</a>
+
+    </div>
+  </nav>
+
+  <!-- End Navbar -->
+  <Section class="page_home1_m">
+    <!-- Start section1 (photo and text) -->
+    <div class="section1  text-center ">
+
+      <!-- النص -->
+      <div class="text">
+        <div class="text2">
+          <h1 class=" display-1">منصة <span class="" style="color:#0ea5e9;">دروسك</span></h1>
+          <h3>منصة متكاملة بها كل ما يحتاجه الطالب ليتفوق</h3>
+        </div>
+      </div>
+
+      <!-- الصورة -->
+      <div class="img2">
+        <img src="./imgs/2-4.png" alt="منصة دروسك" class="img-fluid   img2">
+
+      </div>
+
+    </div>
+
+
+
+    <!-- End section1 (photo and text) -->
+
+
+    <!-- Strat section2 swaper( the best teacher)  -->
+    <div class="thebest text-center " style="margin: 20px 0 70px; padding:0px 30px;">
+
+      <h1>أفضل المدرسين المتخصصين </h1>
+      <p>المنصة تحتوي على نخبة من أفضل المدرسين المتخصصين في جميع المواد. يمكنك الاشتراك معهم وشراء الكورسات الخاصة بهم.
+      </p>
+    </div>
+
+
+    <div class="  swrapper text-center ">
+
+      <div class="container">
+
+        <!-- Swiper -->
+        <div class="slide-swp mySwiper ">
+          <!-- <div class="swiper-pagination"></div> -->
+          <div class="swiper-wrapper ">
+
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="p-2 imgs">
+                  <img class=" " src="./imgs/7db3c2974f23463c4699b9a8b8e56ff62b865494.jpg" alt="">
+                </div>
+
+                <div class="card-body">
+
+                  <div class="iconcrown d-flex align-items-center ">
+
+                    <i class="fas fa-crown"></i>
+                    <h6 class="mx-2">رياضيات</h6>
+
+                  </div>
+                  <h3 class=" d-flex text-align: right " style="padding-right: 5px;">محمد عبد الجواد</h3>
+                  <p class=" d-flex text-align: right " style="padding-right: 5px;">كيمياء - عميد الكيمياء</p>
+                  <div class=" tages " style="display: flex; gap: 20px;">
+
+
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="p-2 imgs">
+                  <img class=" " src="./imgs/c78ffbf64a791da67752132a9aaf7c8f127fc4f4.jpeg" alt="">
+                </div>
+
+                <div class="card-body">
+
+                  <div class="iconcrown d-flex align-items-center ">
+
+                    <i class="fas fa-crown"></i>
+                    <h6 class="mx-2">رياضيات</h6>
+
+                  </div>
+                  <h3 class=" d-flex text-align: right " style="padding-right: 5px;">محمد عبد الجواد</h3>
+                  <p class=" d-flex text-align: right " style="padding-right: 5px;">كيمياء - عميد الكيمياء</p>
+                  <div class=" tages " style="display: flex; gap: 20px;">
+
+
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="p-2 imgs">
+                  <img class=" " src="./imgs/a.jpg" alt="">
+                </div>
+
+                <div class="card-body">
+
+                  <div class="iconcrown d-flex align-items-center ">
+
+                    <i class="fas fa-crown"></i>
+                    <h6 class="mx-2">رياضيات</h6>
+
+                  </div>
+                  <h3 class=" d-flex text-align: right " style="padding-right: 5px;">محمد عبد الجواد</h3>
+                  <p class=" d-flex text-align: right " style="padding-right: 5px;">كيمياء - عميد الكيمياء</p>
+                  <div class=" tages " style="display: flex; gap: 20px;">
+
+
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card">
+                <div class="p-2 imgs">
+                  <img class=" " src="./imgs/b.jpg" alt="">
+                </div>
+
+                <div class="card-body">
+
+                  <div class="iconcrown d-flex align-items-center ">
+
+                    <i class="fas fa-crown"></i>
+                    <h6 class="mx-2">رياضيات</h6>
+
+                  </div>
+                  <h3 class=" d-flex text-align: right " style="padding-right: 5px;">محمد عبد الجواد</h3>
+                  <p class=" d-flex text-align: right " style="padding-right: 5px;">كيمياء - عميد الكيمياء</p>
+                  <div class=" tages " style="display: flex; gap: 20px;">
+
+
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+                    <p class=" tags" style="font-size: 10px ">الصف الاول الثانوي </p>
+
+
+
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+        </div>
+
+
+      </div>
+
+
+
+    </div>
+
+    <div class="swiper-button container  ">
+
+      <div class="icon" id="goPrev"> <i class="fa-solid fa-arrow-right"></i></div>
+      <button class=" buttom">
+        عرض الكل
+      </button>
+
+      <div class="icon" id="goNext"> <i class="fa-solid fa-arrow-left "></i></div>
+
+    </div>
+
+
+    <!-- End section2 swaper  -->
+    <!-- Start achievements -->
+    <section class="achievements">
+      <div class="container text-center">
+        <h2 class="title">إنجازاتنا</h2>
+        <p class="subtitle">نفخر بإنجازاتنا في دعم الطلاب والمعلمين لتحقيق أفضل النتائج.</p>
+
+        <div class="achievements-grid">
+          <!-- المربع الأول -->
+          <div class="achievement-box">
+            <i class="fas fa-medal icon"></i>
+            <h3 class="number">119358+</h3>
+            <p class="desc">طالب متفوق</p>
+          </div>
+
+          <!-- المربع الثاني -->
+          <div class="achievement-box">
+            <i class="fas fa-graduation-cap icon"></i>
+            <h3 class="number">83+</h3>
+            <p class="desc">معلم معتمد</p>
+          </div>
+
+          <!-- المربع الثالث -->
+          <div class="achievement-box">
+            <i class="fas fa-trophy icon"></i>
+            <h3 class="number">59+</h3>
+            <p class="desc">كورس</p>
+          </div>
+
+          <!-- المربع الرابع -->
+          <div class="achievement-box">
+            <i class="fas fa-chart-line icon"></i>
+            <h3 class="number">14+</h3>
+            <p class="desc">كتاب</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End achievements -->
+
+
+    <!-- Start subscrip -->
+    <div class="thebest text-center " style="margin: 20px 0 70px; padding:0px 30px;">
+
+      <h1> <span style="color: #0ea5e9;">كورساتنا</span>المٌقترحة</h1>
+      <p>ريحنا دماغك وجمعنا لك كورسات على مزاجك، مختارة بحب وعناية كأننا بنعمل شوبينج لأحسن شوية كورسات تساعدك وتنميك!
+        🌟
+      </p>
+    </div>
+    <section class="courses">
+      <div class="card-courses">
+        <div class="image-courses"> <img class="" src="./imgs/mohamedsalahcourse.jpg" alt=""></div>
+        <div class="body-course">
+          <div class="bodytop">
+            <div class="bodyright">
+              <div class="brtop">
+                <p>الترم الأول كاملًا (الباقة المخفضة) - (محمد صلاح - لغة عربية - 2 ثانوي )</p>
+              </div>
+              <div class="brmid">
+                <p>هذه الباقة عبارة عن اشتراك الترم الأول كاملًا (3 شهور) بسعر مخفض في مادة اللغة العربية بما في ذلك
+                  الامتحانات الشاملة</p>
+              </div>
+              <div class="brdowm">
+                <p>خلِّ بالك:</p>
+                <p>1- لازم تتفرج على فيديو كيفية تسليم الواجب قبل لما تضغط على تسليم الواجب.</p>
+                <p>2- محاولة تسليم الواجب هي مرة واحدة فقط فلازم تسلم الواجب صح علشان تعرف تشوف باقي المحاضرات ،لو
+                  الواجب قفل منك لازم تتواصل مع الدعم عشان يزودولك محاولة.</p>
+                <p>3- الامتحان بيفتح مرة واحدة بس فحل كويس قبل ما تدوس إنهاء الامتحان ...</p>
+                <p>بالتوفيق يا بطل.</p>
+                </p>
+              </div>
+
+            </div>
+            <div class="bodyleft">
+              <a class=""> الدخول للكوس</a>
+              <a class=""> اشتراك الان!</a>
+            </div>
+
+          </div>
+          <div class="bodybuttom">
+            <div class="price">
+              <span>294.00</span> جنيهًا
+            </div>
+            <div class="date">
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="card-courses">
+        <div class="image-courses"> <img class="" src="./imgs/mohamedsalahcourse.jpg" alt=""></div>
+        <div class="body-course">
+          <div class="bodytop">
+            <div class="bodyright">
+              <div class="brtop">
+                <p>الفصل الأول (محمد أيمن | الأحياء | 3 ثانوي)
+                </p>
+              </div>
+              <div class="brmid">
+                <p>هذه الباقة عبارة عن اشتراك الترم الأول كاملًا (3 شهور) بسعر مخفض في مادة اللغة العربية بما في ذلك
+                  الامتحانات الشاملة</p>
+              </div>
+              <div class="brdowm">
+
+              </div>
+
+            </div>
+            <div class="bodyleft">
+              <a class=""> الدخول للكوس</a>
+              <a class=""> اشتراك الان!</a>
+            </div>
+
+          </div>
+          <div class="bodybuttom">
+            <div class="price">
+              <span>294.00</span> جنيهًا
+            </div>
+            <div class="date">
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="card-courses">
+        <div class="image-courses"> <img class="" src="./imgs/mohamedsalahcourse.jpg" alt=""></div>
+        <div class="body-course">
+          <div class="bodytop">
+            <div class="bodyright">
+              <div class="brtop">
+                <p>الترم الأول كاملًا (الباقة المخفضة) - (محمد صلاح - لغة عربية - 2 ثانوي )</p>
+              </div>
+              <div class="brmid">
+                <p>هذه الباقة عبارة عن اشتراك الترم الأول كاملًا (3 شهور) بسعر مخفض في مادة اللغة العربية بما في ذلك
+                  الامتحانات الشاملة</p>
+              </div>
+              <div class="brdowm">
+                <p>خلِّ بالك:</p>
+                <p>1- لازم تتفرج على فيديو كيفية تسليم الواجب قبل لما تضغط على تسليم الواجب.</p>
+                <p>2- محاولة تسليم الواجب هي مرة واحدة فقط فلازم تسلم الواجب صح علشان تعرف تشوف باقي المحاضرات ،لو
+                  الواجب قفل منك لازم تتواصل مع الدعم عشان يزودولك محاولة.</p>
+                <p>3- الامتحان بيفتح مرة واحدة بس فحل كويس قبل ما تدوس إنهاء الامتحان ...</p>
+                <p>بالتوفيق يا بطل.</p>
+                </p>
+              </div>
+
+            </div>
+            <div class="bodyleft">
+              <a class=""> الدخول للكوس</a>
+              <a class=""> اشتراك الان!</a>
+            </div>
+
+          </div>
+          <div class="bodybuttom">
+            <div class="price">
+              <span>294.00</span> جنيهًا
+            </div>
+            <div class="date">
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="card-courses">
+        <div class="image-courses"> <img class="" src="./imgs/mohamedsalahcourse.jpg" alt=""></div>
+        <div class="body-course">
+          <div class="bodytop">
+            <div class="bodyright">
+              <div class="brtop">
+                <p>الترم الأول كاملًا (الباقة المخفضة) - (محمد صلاح - لغة عربية - 2 ثانوي )</p>
+              </div>
+              <div class="brmid">
+                <p>هذه الباقة عبارة عن اشتراك الترم الأول كاملًا (3 شهور) بسعر مخفض في مادة اللغة العربية بما في ذلك
+                  الامتحانات الشاملة</p>
+              </div>
+              <div class="brdowm">
+                <p>خلِّ بالك:</p>
+                <p>1- لازم تتفرج على فيديو كيفية تسليم الواجب قبل لما تضغط على تسليم الواجب.</p>
+                <p>2- محاولة تسليم الواجب هي مرة واحدة فقط فلازم تسلم الواجب صح علشان تعرف تشوف باقي المحاضرات ،لو
+                  الواجب قفل منك لازم تتواصل مع الدعم عشان يزودولك محاولة.</p>
+                <p>3- الامتحان بيفتح مرة واحدة بس فحل كويس قبل ما تدوس إنهاء الامتحان ...</p>
+                <p>بالتوفيق يا بطل.</p>
+                </p>
+              </div>
+
+            </div>
+            <div class="bodyleft">
+              <a class=""> الدخول للكوس</a>
+              <a class=""> اشتراك الان!</a>
+            </div>
+
+          </div>
+          <div class="bodybuttom">
+            <div class="price">
+              <span>294.00</span> جنيهًا
+            </div>
+            <div class="date">
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="card-courses">
+        <div class="image-courses"> <img class="" src="./imgs/mohamedsalahcourse.jpg" alt=""></div>
+        <div class="body-course">
+          <div class="bodytop">
+            <div class="bodyright">
+              <div class="brtop">
+                <p>الترم الأول كاملًا (الباقة المخفضة) - (محمد صلاح - لغة عربية - 2 ثانوي )</p>
+              </div>
+              <div class="brmid">
+                <p>هذه الباقة عبارة عن اشتراك الترم الأول كاملًا (3 شهور) بسعر مخفض في مادة اللغة العربية بما في ذلك
+                  الامتحانات الشاملة</p>
+              </div>
+              <div class="brdowm">
+                <p>خلِّ بالك:</p>
+                <p>1- لازم تتفرج على فيديو كيفية تسليم الواجب قبل لما تضغط على تسليم الواجب.</p>
+                <p>2- محاولة تسليم الواجب هي مرة واحدة فقط فلازم تسلم الواجب صح علشان تعرف تشوف باقي المحاضرات ،لو
+                  الواجب قفل منك لازم تتواصل مع الدعم عشان يزودولك محاولة.</p>
+                <p>3- الامتحان بيفتح مرة واحدة بس فحل كويس قبل ما تدوس إنهاء الامتحان ...</p>
+                <p>بالتوفيق يا بطل.</p>
+                </p>
+              </div>
+
+            </div>
+            <div class="bodyleft">
+              <a class=""> الدخول للكوس</a>
+              <a class=""> اشتراك الان!</a>
+            </div>
+
+          </div>
+          <div class="bodybuttom">
+            <div class="price">
+              <span>294.00</span> جنيهًا
+            </div>
+            <div class="date">
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="card-courses">
+        <div class="image-courses"> <img class="" src="./imgs/mohamedsalahcourse.jpg" alt=""></div>
+        <div class="body-course">
+          <div class="bodytop">
+            <div class="bodyright">
+              <div class="brtop">
+                <p>الترم الأول كاملًا (الباقة المخفضة) - (محمد صلاح - لغة عربية - 2 ثانوي )</p>
+              </div>
+              <div class="brmid">
+                <p>هذه الباقة عبارة عن اشتراك الترم الأول كاملًا (3 شهور) بسعر مخفض في مادة اللغة العربية بما في ذلك
+                  الامتحانات الشاملة</p>
+              </div>
+              <div class="brdowm">
+                <p>خلِّ بالك:</p>
+                <p>1- لازم تتفرج على فيديو كيفية تسليم الواجب قبل لما تضغط على تسليم الواجب.</p>
+                <p>2- محاولة تسليم الواجب هي مرة واحدة فقط فلازم تسلم الواجب صح علشان تعرف تشوف باقي المحاضرات ،لو
+                  الواجب قفل منك لازم تتواصل مع الدعم عشان يزودولك محاولة.</p>
+                <p>3- الامتحان بيفتح مرة واحدة بس فحل كويس قبل ما تدوس إنهاء الامتحان ...</p>
+                <p>بالتوفيق يا بطل.</p>
+                </p>
+              </div>
+
+            </div>
+            <div class="bodyleft">
+              <a class=""> الدخول للكوس</a>
+              <a class=""> اشتراك الان!</a>
+            </div>
+
+          </div>
+          <div class="bodybuttom">
+            <div class="price">
+              <span>294.00</span> جنيهًا
+            </div>
+            <div class="date">
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="card-courses">
+        <div class="image-courses"> <img class="" src="./imgs/mohamedsalahcourse.jpg" alt=""></div>
+        <div class="body-course">
+          <div class="bodytop">
+            <div class="bodyright">
+              <div class="brtop">
+                <p>الترم الأول كاملًا (الباقة المخفضة) - (محمد صلاح - لغة عربية - 2 ثانوي )</p>
+              </div>
+              <div class="brmid">
+                <p>هذه الباقة عبارة عن اشتراك الترم الأول كاملًا (3 شهور) بسعر مخفض في مادة اللغة العربية بما في ذلك
+                  الامتحانات الشاملة</p>
+              </div>
+              <div class="brdowm">
+                <p>خلِّ بالك:</p>
+                <p>1- لازم تتفرج على فيديو كيفية تسليم الواجب قبل لما تضغط على تسليم الواجب.</p>
+                <p>2- محاولة تسليم الواجب هي مرة واحدة فقط فلازم تسلم الواجب صح علشان تعرف تشوف باقي المحاضرات ،لو
+                  الواجب قفل منك لازم تتواصل مع الدعم عشان يزودولك محاولة.</p>
+                <p>3- الامتحان بيفتح مرة واحدة بس فحل كويس قبل ما تدوس إنهاء الامتحان ...</p>
+                <p>بالتوفيق يا بطل.</p>
+                </p>
+              </div>
+
+            </div>
+            <div class="bodyleft">
+              <a class=""> الدخول للكوس</a>
+              <a class=""> اشتراك الان!</a>
+            </div>
+
+          </div>
+          <div class="bodybuttom">
+            <div class="price">
+              <span>294.00</span> جنيهًا
+            </div>
+            <div class="date">
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="card-courses">
+        <div class="image-courses"> <img class="" src="./imgs/mohamedsalahcourse.jpg" alt=""></div>
+        <div class="body-course">
+          <div class="bodytop">
+            <div class="bodyright">
+              <div class="brtop">
+                <p>الترم الأول كاملًا (الباقة المخفضة) - (محمد صلاح - لغة عربية - 2 ثانوي )</p>
+              </div>
+              <div class="brmid">
+                <p>هذه الباقة عبارة عن اشتراك الترم الأول كاملًا (3 شهور) بسعر مخفض في مادة اللغة العربية بما في ذلك
+                  الامتحانات الشاملة</p>
+              </div>
+              <div class="brdowm">
+                <p>خلِّ بالك:</p>
+                <p>1- لازم تتفرج على فيديو كيفية تسليم الواجب قبل لما تضغط على تسليم الواجب.</p>
+                <p>2- محاولة تسليم الواجب هي مرة واحدة فقط فلازم تسلم الواجب صح علشان تعرف تشوف باقي المحاضرات ،لو
+                  الواجب قفل منك لازم تتواصل مع الدعم عشان يزودولك محاولة.</p>
+                <p>3- الامتحان بيفتح مرة واحدة بس فحل كويس قبل ما تدوس إنهاء الامتحان ...</p>
+                <p>بالتوفيق يا بطل.</p>
+                </p>
+              </div>
+
+            </div>
+            <div class="bodyleft">
+              <a class=""> الدخول للكوس</a>
+              <a class=""> اشتراك الان!</a>
+            </div>
+
+          </div>
+          <div class="bodybuttom">
+            <div class="price">
+              <span>294.00</span> جنيهًا
+            </div>
+            <div class="date">
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+              <h3>السبت، ٢٣ أغسطس ٢٠٢٥
+              </h3>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </section>
+
+    <!-- زرار عرض المزيد -->
+    <div class="show-more-container">
+      <button id="toggleCards">عرض المزيد</button>
+    </div>
+    <!-- End subscrip -->
+
+
+    <!-- ==========  start لماذا منصة دروسك؟ ========== -->
+    <section class="why-eduvalu">
+      <div class="container">
+        <!-- العنوان -->
+        <h2 class="title">لماذا منصة دروسك ؟</h2>
+        <p class="subtitle">اكتشف المميزات التي تجعل منصتنا الخيار الأفضل للطلاب والمعلمين.</p>
+
+        <!-- المربعات -->
+        <div class="features-grid">
+          <!-- المربع الأول -->
+          <div class="feature-box">
+            <div class="icon"><i class="fas fa-laptop"></i></div>
+            <h3 class="feature-title">أفضل المدرسين</h3>
+            <p class="feature-desc">نخبة من أفضل المدرسين المتخصصين في جميع المواد الدراسية.</p>
+          </div>
+
+          <!-- المربع الثاني -->
+          <div class="feature-box">
+            <div class="icon"><i class="fas fa-book-open"></i></div>
+            <h3 class="feature-title">محتوى تعليمي متكامل</h3>
+            <p class="feature-desc">كورسات وكتب وامتحانات شاملة تغطي جميع احتياجات الطلاب.</p>
+          </div>
+
+          <!-- المربع الثالث -->
+          <div class="feature-box">
+            <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3 class="feature-title">نتائج متميزة</h3>
+            <p class="feature-desc">مساعدة الطلاب على تحقيق التفوق والنجاح في جميع المواد.</p>
+          </div>
+
+          <!-- المربع الرابع -->
+          <div class="feature-box">
+            <div class="icon"><i class="fas fa-lightbulb"></i></div>
+            <h3 class="feature-title">تجربة تعليمية حديثة</h3>
+            <p class="feature-desc">منصة تفاعلية وسهلة الاستخدام مع أحدث التقنيات التعليمية.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== End لماذا منصة دروسك؟ ========== -->
+
+    <!-- Start swaper subjects -->
+    <section class="subjects">
+
+      <div class="thebest text-center " style="margin: 20px 0 70px; padding:0px 30px;">
+
+        <h1>المواد الدراسية الموجودة</h1>
+        <p>تتيح المنصة جميع المواد الدراسية لطلاب الشعب العلمية والأدبية وطلاب مدارس العربي واللغات </p>
+      </div>
+
+
+      <div class="  swrapper text-center ">
+
+        <div class="container">
+
+          <!-- Swiper -->
+          <div class="slide-swp  swiper-subject ">
+            <!-- <div class="swiper-pagination"></div> -->
+            <div class="swiper-wrapper  ">
+
+              <div class="swiper-slide" style="height: auto; ">
+                <div class="card-subject" style="width: 100%;">
+                  <div class="subject-card">
+                    <div class="subject-img">
+                      <img src="./imgs/Englishimg.png" alt="English">
+                    </div>
+                    <div class="text-subject">
+                      <h1 class="namesubjectEB">English</h1>
+                      <p class="namesubjectEB">انجليزي</p>
+                      <p class="subject-teachers">
+                        <i class="fas fa-user-graduate"></i>
+                        (<span>3</span> مدرس) موجود
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="swiper-slide" style="height: auto; ">
+                <div class="card-subject" style="width: 100%;">
+                  <div class="subject-card">
+                    <div class="subject-img">
+                      <img src="./imgs/Englishimg.png" alt="English">
+                    </div>
+                    <div class="text-subject">
+                      <h1 class="namesubjectEB">English</h1>
+                      <p class="namesubjectEB">انجليزي</p>
+                      <p class="subject-teachers">
+                        <i class="fas fa-user-graduate"></i>
+                        (<span>3</span> مدرس) موجود
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="height: auto; ">
+                <div class="card-subject" style="width: 100%;">
+                  <div class="subject-card">
+                    <div class="subject-img">
+                      <img src="./imgs/Englishimg.png" alt="English">
+                    </div>
+                    <div class="text-subject">
+                      <h1 class="namesubjectEB">English</h1>
+                      <p class="namesubjectEB">انجليزي</p>
+                      <p class="subject-teachers">
+                        <i class="fas fa-user-graduate"></i>
+                        (<span>3</span> مدرس) موجود
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="height: auto; ">
+                <div class="card-subject" style="width: 100%;">
+                  <div class="subject-card">
+                    <div class="subject-img">
+                      <img src="./imgs/Englishimg.png" alt="English">
+                    </div>
+                    <div class="text-subject">
+                      <h1 class="namesubjectEB">English</h1>
+                      <p class="namesubjectEB">انجليزي</p>
+                      <p class="subject-teachers">
+                        <i class="fas fa-user-graduate"></i>
+                        (<span>3</span> مدرس) موجود
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="height: auto; ">
+                <div class="card-subject" style="width: 100%;">
+                  <div class="subject-card">
+                    <div class="subject-img">
+                      <img src="./imgs/Englishimg.png" alt="English">
+                    </div>
+                    <div class="text-subject">
+                      <h1 class="namesubjectEB">English</h1>
+                      <p class="namesubjectEB">انجليزي</p>
+                      <p class="subject-teachers">
+                        <i class="fas fa-user-graduate"></i>
+                        (<span>3</span> مدرس) موجود
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="height: auto; ">
+                <div class="card-subject" style="width: 100%;">
+                  <div class="subject-card">
+                    <div class="subject-img">
+                      <img src="./imgs/Englishimg.png" alt="English">
+                    </div>
+                    <div class="text-subject">
+                      <h1 class="namesubjectEB">عربي</h1>
+                      <p class="namesubjectEB">انجليزي</p>
+                      <p class="subject-teachers">
+                        <i class="fas fa-user-graduate"></i>
+                        (<span>3</span> مدرس) موجود
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+
+      </div>
+
+
+
+      </div>
+
+      <div class="swiper-button container  ">
+
+        <div class="icon" id="goPrev1"> <i class="fa-solid fa-arrow-right"></i></div>
+        <button class=" buttom">
+          عرض الكل
+        </button>
+
+        <div class="icon" id="goNext1"> <i class="fa-solid fa-arrow-left "></i></div>
+
+      </div>
+
+    </section>
+    <!-- End swaper subjects -->
+
+
+
+    <!-- ==========  Start FAQ = Frequently Asked Questions (الأسئلة الشائعة).========== -->
+    <section class="faq-section mt-5">
+      <div class="container">
+        <h2 class="faq-title">الأسئلة الشائعة</h2>
+        <p class="faq-subtitle">هنا هتلاقي إجابات لأكثر الأسئلة شيوعًا عن منصتنا وخدماتنا</p>
+
+        <div class="faq">
+
+
+
+
+
+          <!-- سؤال 1 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>كيف أسجل في المنصة؟</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              التسجيل سهل جدًا! اضغط على زر <strong style="color: #0ea5e9;">إنشاء حساب</strong> واتبع الخطوات البسيطة.
+            </div>
+          </div>
+
+          <!-- سؤال 2 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>هل الكورسات مناسبة لكل المراحل الدراسية؟</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              نعم، عندنا كورسات بتغطي جميع المراحل من الابتدائية للثانوية وحتى الجامعة.
+            </div>
+          </div>
+
+          <!-- سؤال 3 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>إزاي أقدر أتواصل مع المدرسين؟</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              تقدر تتواصل مع المدرسين من خلال الرسائل داخل المنصة أو الجلسات المباشرة.
+            </div>
+          </div>
+
+          <!-- سؤال 4 -->
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>هل فيه دعم فني لو واجهت مشكلة؟</span>
+              <span class="faq-icon">+</span>
+            </div>
+            <div class="faq-answer">
+              طبعًا، فريق الدعم متاح 24/7 عشان يساعدك في أي مشكلة تواجهها.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.querySelectorAll(".faq-question").forEach((question) => {
+        question.addEventListener("click", () => {
+          const item = question.parentNode;
+          item.classList.toggle("active");
+
+          // غيّر علامة + و -
+          const icon = question.querySelector(".faq-icon");
+          icon.textContent = item.classList.contains("active") ? "-" : "+";
+        });
+      });
+    </script>
+    <!-- ==========  End FAQ = Frequently Asked Questios (الأسئلة الشائعة).========== -->
+
+
+
+
+    <!-- Start join to drosk -->
+    <section class="join-teacher">
+      <div class="container">
+        <div class="image">
+          <img src="./imgs/Teacher3.jpeg" alt="Teacher Invitation">
+        </div>
+        <div class="content">
+          <h2>كن أكثر من مجرد مدرس... كن شريكًا في التعليم</h2>
+          <p>
+            في <strong>دروسك</strong> نتيح لك الفرصة لاختيار دورك المناسب
+            سواء كنت <span>مدرس مبتكر</span>، <span>صانع محتوى</span>، أو <span>مشرف أكاديمي</span>.
+            انضم إلينا وابدأ رحلتك التعليمية مع طلابك.
+          </p>
+          <a href="#" class="cta-btn">انضم الآن</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- End join to drosk -->
+
+    <!-- start footer -->
+
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-about">
+          <h3>دروسك</h3>
+          <p>
+            منصتك التعليمية لطلاب ومعلمين الثانوية.
+            هدفنا نوصل العلم بطريقة سهلة وعصرية.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>روابط سريعة</h4>
+          <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">الكورسات</a></li>
+            <li><a href="#">انضم كمدرس</a></li>
+            <li><a href="#">تواصل معنا</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h4>تابعنا</h4>
+          <div class="icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="copy">
+        <p>© 2025 جميع الحقوق محفوظة - دروسك</p>
+      </div>
+    </footer>
+    <!-- End footer -->
+  </Section>
+
+  <!-- Font Awesome (icons) -->
+
+<section class="Student_registration_page_m " style="display:none;">
+
+  <!-- Start Form -->
+  <div class="form-container">
+    <h2><b>طلب انشاء حساب :</b></h2>
+    <p class="subtitle">
+      ادخل بياناتك بشكل صحيح وسيتم التواصل معك خلال ساعات قليلة لتفعيل الحساب!<br>
+      يوجد لديك حساب بالفعل؟ <span>ادخل إلى حسابك الآن!</span>
+    </p>
+
+    <form class="grid-form" id="registerForm">
+
+      <!-- الاسم الأول -->
+      <div class="form-group">
+        <div style="position: relative;">
+          <input type="text" required placeholder=" ">
+          <label><i class="fa-solid fa-user"></i> الاسم الأول</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- الاسم الثاني -->
+      <div class="form-group">
+        <div style="position: relative;">
+          <input type="text" required placeholder=" ">
+          <label><i class="fa-solid fa-user"></i> الاسم الثاني</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- الاسم الثالث -->
+      <div class="form-group">
+        <div style="position: relative;">
+          <input type="text" required placeholder=" ">
+          <label><i class="fa-solid fa-user"></i> الاسم الثالث</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- الاسم الأخير -->
+      <div class="form-group">
+        <div style="position: relative;">
+          <input type="text" required placeholder=" ">
+          <label><i class="fa-solid fa-user"></i> الاسم الأخير</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- هاتف الطالب -->
+      <div class="form-group full-width">
+        <div style="position: relative;">
+          <input type="tel" id="student-phone" required placeholder=" ">
+          <label><i class="fa-solid fa-phone"></i> هاتف الطالب</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- رقم هاتف الأب -->
+      <div class="form-group">
+        <div style="position: relative;">
+          <input type="tel" required placeholder=" ">
+          <label><i class="fa-solid fa-phone"></i> رقم هاتف الأب</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- رقم هاتف الأم -->
+      <div class="form-group">
+        <div style="position: relative;">
+          <input type="tel" required placeholder=" ">
+          <label><i class="fa-solid fa-phone"></i> رقم هاتف الأم</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- مهنة ولي الأمر -->
+      <div class="form-group">
+        <div style="position: relative;">
+          <input type="text" required placeholder=" ">
+          <label><i class="fa-solid fa-briefcase"></i> مهنة ولي الأمر</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- اسم المدرسة -->
+      <div class="form-group">
+        <div style="position: relative;">
+          <input type="text" required placeholder=" ">
+          <label><i class="fa-solid fa-school"></i> اسم المدرسة</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- المحافظة -->
+      <div class="form-group form-group1">
+        <div style="position: relative;">
+          <select id="governorate" required>
+            <option value="" disabled selected hidden></option>
+            <option value="القاهرة">القاهرة</option>
+            <option value="الجيزة">الجيزة</option>
+          </select>
+          <label><i class="fa-solid fa-map-location-dot"></i> المحافظة</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- الإدارة -->
+      <div class="form-group form-group1">
+        <div style="position: relative;">
+          <select id="admin" required>
+            <option value="" disabled selected hidden></option>
+            <option value="قسم 1">قسم 1</option>
+            <option value="قسم 2">قسم 2</option>
+          </select>
+          <label><i class="fa-solid fa-building"></i> الإدارة</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- البريد الإلكتروني -->
+      <div class="form-group full-width">
+        <div style="position: relative;">
+          <input type="email" id="email" required placeholder=" ">
+          <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+
+      <!-- كلمة المرور -->
+      <div class="form-group password-group">
+        <div style="position: relative;">
+          <input type="password" id="password" required placeholder=" ">
+          <label><i class="fa-solid fa-lock"></i> كلمة المرور</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- تأكيد كلمة المرور -->
+      <div class="form-group password-group">
+        <div style="position: relative;">
+          <input type="password" id="confirm-password" required placeholder=" ">
+          <label><i class="fa-solid fa-lock"></i> تأكيد كلمة المرور</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+      <!-- الشعبة -->
+      <div class="form-group form-group1 full-width">
+        <div style="position: relative;">
+          <select id="specialization" required>
+            <option value="" disabled selected hidden></option>
+            <option value="science">الصف الاول الثانوي</option>
+            <option value="arts">الصف الثاني الثانوي </option>
+            <option value="math">الصف الثالث الثانوي</option>
+          </select>
+          <label><i class="fa-solid fa-book"></i> الصف الدراسي </label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- الشعبة -->
+      <div class="form-group form-group1 full-width">
+        <div style="position: relative;">
+          <select id="specialization" required>
+            <option value="" disabled selected hidden></option>
+            <option value="science">علمي</option>
+            <option value="arts">أدبي</option>
+            <option value="math">رياضة</option>
+          </select>
+          <label><i class="fa-solid fa-book"></i> الشعبة</label>
+          <span class="bg-anim"></span>
+        </div>
+        <span class="error-msg"></span>
+      </div>
+
+      <!-- زرار تسجيل -->
+      <button class="submit-student" type="submit"><i class="fa-solid fa-user-plus"></i> إنشاء الحساب</button>
+
+    </form>
+
+    <p class="subtitle">
+      يوجد لديك حساب بالفعل؟ <span>ادخل إلى حسابك الآن!</span>
+    </p>
+
+  </div>
+</section>
+
+
+
+
+  <Section class="Login_page" style="display:none;">
+    
+
+    <div class="form-container">
+      <h2><b>تسجيل الدخول</b></h2>
+
+
+      <p class="subtitle">
+
+        ادخل على حسابك بادخال رقم الهاتف و كلمة المرور المسجل بهم من قبل
+
+      </p>
+      <p>لا يوجد لديك حساب؟
+        انشئ حسابك الآن !</p>
+
+
+
+
+
+      <!-- الحقول -->
+<form id="form_login_m">
+  <!-- البريد الإلكتروني -->
+  <div class="form-group">
+    <div style="position: relative;">
+      <input type="email" id="email" required placeholder=" ">
+      <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- كلمة المرور -->
+  <div class="form-group password-group">
+    <div style="position: relative;">
+      <input type="password" id="password" required placeholder=" ">
+      <label><i class="fa-solid fa-lock"></i> كلمة المرور</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- تسجيل بالكود -->
+  <div class="alt_login_m">
+    <label class="switch_toggle_m">
+      <input type="checkbox" class="checkbox_toggle_m">
+      <span class="slider_toggle_m"></span>
+    </label>
+    <span>أو قم بتسجيل الدخول عن طريق الكود</span>
+  </div>
+
+  <div class="links_section_m">
+    <span>لا يوجد لديك حساب؟</span>
+    <a href="#" id="link_create_m">انشئ حسابك الآن!</a>
+    <br>
+    <span>هل نسيت كلمة السر؟</span>
+    <a href="#" id="link_forgot_m">اضغط هنا</a>
+  </div>
+
+  <button type="submit_login" class="btn_login_m">تسجيل الدخول</button>
+</form>
+
+    </div>
+
+  </Section>
+
+
+
+  <section class="loginaspartient_page" style="display:none;">
+
+    <!-- Start Form -->
+
+    <div class="form-container">
+      <h2><b>تسجيل ولي الأمر :</b></h2>
+      <p class="subtitle">
+        ادخل بياناتك بشكل صحيح وسيتم تفعيل الحساب فوراً!<br>
+        لديك حساب بالفعل؟ <span>ادخل إلى حسابك الآن!</span>
+      </p>
+
+  <form class="grid-form" id="parentRegisterForm">
+  <!-- الاسم الأول -->
+  <div class="form-group">
+    <div style="position: relative;">
+      <input type="text" required placeholder=" ">
+      <label><i class="fa-solid fa-user"></i> الاسم الأول</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- الاسم الأخير -->
+  <div class="form-group">
+    <div style="position: relative;">
+      <input type="text" required placeholder=" ">
+      <label><i class="fa-solid fa-user"></i> الاسم الأخير</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- هاتف ولي الأمر -->
+  <div class="form-group full-width">
+    <div style="position: relative;">
+      <input type="tel" required placeholder=" ">
+      <label><i class="fa-solid fa-phone"></i> هاتف ولي الأمر</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- البريد الإلكتروني -->
+  <div class="form-group full-width">
+    <div style="position: relative;">
+      <input type="email" required placeholder=" ">
+      <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- كلمة المرور -->
+  <div class="form-group password-group">
+    <div style="position: relative;">
+      <input type="password" required placeholder=" ">
+      <label><i class="fa-solid fa-lock"></i> كلمة المرور</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- تأكيد كلمة المرور -->
+  <div class="form-group password-group">
+    <div style="position: relative;">
+      <input type="password" required placeholder=" ">
+      <label><i class="fa-solid fa-lock"></i> تأكيد كلمة المرور</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- زرار تسجيل -->
+  <button class="submit-Parent" type="submit">
+    <i class="fa-solid fa-user-plus"></i> إنشاء الحساب
+  </button>
+</form>
+
+      <p class="subtitle">
+        لديك حساب بالفعل؟ <span>ادخل إلى حسابك الآن!</span>
+      </p>
+    </div>
+
+
+
+
+  </section>
+
+
+  <section class="Teacher_registration_page_m" style="display: none;">
+    <div class="form-container">
+      <h2><b>تسجيل مدرس :</b></h2>
+      <p class="subtitle">
+        ادخل بياناتك الشخصية والخبرات والروابط الخاصة بك.<br>
+        لديك حساب بالفعل؟ <span>ادخل إلى حسابك الآن!</span>
+      </p>
+<form class="grid-form" id="teacherRegisterForm">
+
+  <!-- الاسم الأول -->
+  <div class="form-group">
+    <div style="position: relative;">
+      <input type="text" required placeholder=" ">
+      <label><i class="fa-solid fa-user"></i> الاسم الأول</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- الاسم الثاني -->
+  <div class="form-group">
+    <div style="position: relative;">
+      <input type="text" required placeholder=" ">
+      <label><i class="fa-solid fa-user"></i> الاسم الثاني</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- الاسم الثالث -->
+  <div class="form-group">
+    <div style="position: relative;">
+      <input type="text" required placeholder=" ">
+      <label><i class="fa-solid fa-user"></i> الاسم الثالث</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- الاسم الأخير -->
+  <div class="form-group">
+    <div style="position: relative;">
+      <input type="text" required placeholder=" ">
+      <label><i class="fa-solid fa-user"></i> الاسم الأخير</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- رقم الهاتف -->
+  <div class="form-group full-width">
+    <div style="position: relative;">
+      <input type="tel" required placeholder=" ">
+      <label><i class="fa-solid fa-phone"></i> رقم الهاتف</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- الراتب المتوقع -->
+  <div class="form-group full-width">
+    <div style="position: relative;">
+      <input type="number" placeholder=" ">
+      <label><i class="fa-solid fa-money-bill"></i> الراتب المتوقع</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- المحافظة -->
+  <div class="form-group full-width">
+    <div style="position: relative;">
+      <input type="text" placeholder=" ">
+      <label><i class="fa-solid fa-map-location-dot"></i> المحافظة</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- العنوان -->
+  <div class="form-group full-width">
+    <div style="position: relative;">
+      <input type="text" placeholder=" ">
+      <label><i class="fa-solid fa-location-dot"></i> العنوان</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- البريد الإلكتروني -->
+  <div class="form-group full-width">
+    <div style="position: relative;">
+      <input type="email" placeholder=" ">
+      <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
+      <span class="bg-anim"></span>
+    </div>
+    <span class="error-msg"></span>
+  </div>
+
+  <!-- روابط التواصل الاجتماعي -->
+  <div class="form-group full-width">
+    <div style="position: relative;">
+      <input type="url" placeholder=" ">
+      <label><i class="fa-brands fa-facebook"></i> رابط الفيسبوك (اختياري)</label>
+    </div>
+  </div>
+
+  <div class="form-group full-width">
+    <div style="position: relative;">
+      <input type="url" placeholder=" ">
+      <label><i class="fa-brands fa-instagram"></i> رابط الإنستجرام (اختياري)</label>
+    </div>
+  </div>
+
+  <div class="form-group full-width">
+    <div style="position: relative;">
+      <input type="url" placeholder=" ">
+      <label><i class="fa-solid fa-link"></i> رابط موقعك الشخصي / بورتفوليو / بيهانس (اختياري)</label>
+    </div>
+  </div>
+
+  <!-- زر الانضمام -->
+  <button class="submit_teacher" type="submit">
+    <i class="fa-solid fa-user-plus"></i> انضم الآن
+  </button>
+
+</form>
+
+
+    </div>
+
+  </section>
+
+  <!-- الزرار الثابت -->
+  <button id="goHomeBtn" class="fixed-btn">🏠</button>
+
+
+  <!-- JavaScript الخاص بـ  -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="./js/buttomsjs/swaper.js"></script>
+  <!--Bootstrap -->
+
+  <script src="./js/buttomsjs/buttom.js"></script>
+  <script src="./js/governorates.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/pages.js"></script>
+
+
+
+
+
+</body>
+
+</html>
