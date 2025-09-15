@@ -1,207 +1,175 @@
 
-const toggle = document.getElementById("darkToggle");
-const body = document.body;
-const circleIcon = toggle.querySelector(".toggle-circle");
-
-toggle.addEventListener("click", () => {
-  toggle.classList.toggle("active");
-  body.classList.toggle("dark");
-
-  if (body.classList.contains("dark")) {
-    circleIcon.innerHTML = `<i class="fas fa-moon"></i>`;
-    toggle.classList.add("dark-btn");   // يخلي الزرار رمادي
-  } else {
-    circleIcon.innerHTML = `<i class="fas fa-sun"></i>`;
-    toggle.classList.remove("dark-btn"); // يرجعه عادي
-  }
-});
-
-
-// menu
-
-
-const menu = document.querySelector('.buttomsmallscreen');
-const iconMenu = document.querySelector('.iconmenu'); // أيقونة bars
-const closeBtn = document.querySelector('.close-btn');
-
-// فتح القائمة
-iconMenu.addEventListener('click', () => {
-  menu.classList.add('active');
-});
-
-// إغلاق القائمة
-closeBtn.addEventListener('click', () => {
-  menu.classList.remove('active');
-});
-
-//search
-
-const btnSearch = document.querySelector('.btnsearch');
-const searchBox = document.querySelector('.search-box');
-const closeSearch = document.querySelector('.close-search');
-
-// عند الضغط على زر البحث
-btnSearch.addEventListener('click', () => {
-  searchBox.style.display = 'flex';
-});
-
-// عند الضغط على X
-closeSearch.addEventListener('click', () => {
-  searchBox.style.display = 'none';
-});
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const cards = document.querySelectorAll(".card-courses");
-  const button = document.getElementById("toggleCards");
-  let showingAll = false;
-
-  // اخفي الكروت بعد أول 3
-  cards.forEach((card, index) => {
-    if (index > 2) card.classList.add("hidden");
-  });
-
-  button.addEventListener("click", function () {
-    showingAll = !showingAll;
-    if (showingAll) {
-      cards.forEach(card => card.classList.remove("hidden"));
-      button.textContent = "عرض أقل";
-    } else {
-      cards.forEach((card, index) => {
-        if (index > 2) card.classList.add("hidden");
-      });
-      button.textContent = "عرض المزيد";
-    }
-  });
-});
-
-
 document.addEventListener("DOMContentLoaded", () => {
-  // ===== تحديد العناصر =====
-  const createBtn = document.getElementById("create_account");
-  const createLink = document.getElementById("create_account_link");
-
-  const loginBtns = document.querySelectorAll(".buttomloginhome.loginbtn, .login-link");
-  const parentBtn = document.querySelector(".loginparnt");
-  const parentLink = document.querySelector(".parant_page");
-
-  const closeBtn = document.querySelector(".close-btn"); // زر الإغلاق
-
-  // الصفحات
-  const homeSection = document.querySelector(".page_home1_m");
+  // ==================== عناصر الصفحات ====================
+  const homeSection    = document.querySelector(".page_home1_m");
   const studentSection = document.querySelector(".Student_registration_page_m");
-  const loginSection = document.querySelector(".Login_page");
-  const parentSection = document.querySelector(".loginaspartient_page");
-
-  // ===== دالة لإخفاء كل الصفحات =====
-  function hideAllSections() {
-    [homeSection, studentSection, loginSection, parentSection].forEach(sec => {
-      if (sec) sec.style.display = "none";
-    });
-  }
-
-  // ===== دوال العرض لكل صفحة =====
-  function showStudentSection() {
-    hideAllSections();
-    if (studentSection) studentSection.style.display = "block";
-  }
-
-  function showLoginSection() {
-    hideAllSections();
-    if (loginSection) loginSection.style.display = "block";
-  }
-
-  function showParentSection() {
-    hideAllSections();
-    if (parentSection) parentSection.style.display = "block";
-  }
-
-  // ===== إضافة الأحداث =====
-  // إنشاء حساب
-  [createBtn, createLink].forEach(el => {
-    if (el) {
-      el.addEventListener("click", (e) => {
-        e.preventDefault();
-        showStudentSection();
-        if (closeBtn) closeBtn.click();
-      });
-    }
-  });
-
-  // تسجيل دخول
-  loginBtns.forEach(el => {
-    if (el) {
-      el.addEventListener("click", (e) => {
-        e.preventDefault();
-        showLoginSection();
-        if (closeBtn) closeBtn.click();
-      });
-    }
-  });
-
-  // تسجيل كـ ولي أمر
-  [parentBtn, parentLink].forEach(el => {
-    if (el) {
-      el.addEventListener("click", (e) => {
-        e.preventDefault();
-        showParentSection();
-        if (closeBtn) closeBtn.click();
-      });
-    }
-  });
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const goHomeBtn = document.getElementById("goHomeBtn");
-
-  const homeSection = document.querySelector(".page_home1_m");
-  const studentSection = document.querySelector(".Student_registration_page_m");
-  const loginSection = document.querySelector(".Login_page");
-  const parentSection = document.querySelector(".loginaspartient_page");
-
-  goHomeBtn.addEventListener("click", () => {
-    // اظهار الصفحة الرئيسية
-    if (homeSection) homeSection.style.display = "block";
-
-    // اخفاء باقي الصفحات
-    [studentSection, loginSection, parentSection].forEach(sec => {
-      if (sec) sec.style.display = "none";
-    });
-
-    // العودة لبداية الصفحة
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth" // تحريك سلس
-    });
-  });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const goHomeBtn = document.getElementById("goHomeBtn");
-
-  const homeSection = document.querySelector(".page_home1_m");
-  const studentSection = document.querySelector(".Student_registration_page_m");
-  const loginSection = document.querySelector(".Login_page");
-  const parentSection = document.querySelector(".loginaspartient_page");
+  const loginSection   = document.querySelector(".Login_page");
+  const parentSection  = document.querySelector(".loginaspartient_page");
   const teacherSection = document.querySelector(".Teacher_registration_page_m");
+  const forgetPasswordPage = document.querySelector(".forget-password-page");
 
-  // زرار "انضم الآن"
-  const joinNowBtn = document.querySelector(".cta-btn");
+  // ==================== أزرار التنقل ====================
+  const createBtns     = document.querySelectorAll("#create_account, #create_account_link");
+  const loginBtns      = document.querySelectorAll(".buttomloginhome.loginbtn, .login-link");
+  const parentBtns     = document.querySelectorAll(".loginparnt, .parant_page");
+  const goHomeBtn      = document.getElementById("goHomeBtn");
+  const joinNowBtn     = document.querySelector(".cta-btn");
+  const forgotLink     = document.getElementById("link_forgot_m");
 
-  if (joinNowBtn) {
-    joinNowBtn.addEventListener("click", (e) => {
-      e.preventDefault(); // علشان ما يعملش reload للصفحة
+  const closeBtn       = document.querySelector(".close-btn");
 
-      // اخفاء باقي الصفحات
-      if (homeSection) homeSection.style.display = "none";
-      if (studentSection) studentSection.style.display = "none";
-      if (loginSection) loginSection.style.display = "none";
-      if (parentSection) parentSection.style.display = "none";
+  // ==================== دوال مساعدة ====================
+  function hideAllSections() {
+    [homeSection, studentSection, loginSection, parentSection, teacherSection, forgetPasswordPage].forEach(sec => {
+      if (sec) sec.style.display = "none";
+    });
+  }
 
-      // اظهار صفحة المعلم
-      if (teacherSection) teacherSection.style.display = "block";
+  function showSection(section) {
+    hideAllSections();
+    if (section) section.style.display = "block";
+    window.scrollTo({ top: 0, behavior: "smooth" }); // رجوع لأعلى الصفحة
+  }
+
+  function closeMenuIfOpen() {
+    if (closeBtn) closeBtn.click();
+  }
+
+  // ==================== الأحداث ====================
+  createBtns.forEach(btn => btn.addEventListener("click", e => { 
+    e.preventDefault(); 
+    showSection(studentSection); 
+    closeMenuIfOpen();
+  }));
+
+  loginBtns.forEach(btn => btn.addEventListener("click", e => { 
+    e.preventDefault(); 
+    showSection(loginSection); 
+    closeMenuIfOpen();
+  }));
+
+  parentBtns.forEach(btn => btn.addEventListener("click", e => { 
+    e.preventDefault(); 
+    showSection(parentSection); 
+    closeMenuIfOpen();
+  }));
+
+  if (goHomeBtn) goHomeBtn.addEventListener("click", () => showSection(homeSection));
+
+  if (joinNowBtn) joinNowBtn.addEventListener("click", e => {
+    e.preventDefault();
+    showSection(teacherSection);
+  });
+
+  if (forgotLink) forgotLink.addEventListener("click", e => {
+    e.preventDefault();
+    showSection(forgetPasswordPage);
+  });
+
+  // ==================== نسيت كلمة المرور ====================
+  const forgotPasswordForm = document.getElementById("forgotPasswordForm");
+  const verifyCodeForm     = document.getElementById("verifyCodeForm");
+  const resetPasswordForm  = document.getElementById("resetPasswordForm");
+  let generatedCode = "";
+
+  if (forgotPasswordForm) {
+    forgotPasswordForm.addEventListener("submit", e => {
+      e.preventDefault();
+      const email = document.getElementById("resetEmail").value.trim();
+      if (!email) return alert("من فضلك أدخل البريد الإلكتروني");
+
+      generatedCode = "123456"; // كود تجريبي
+      alert("تم إرسال الكود إلى بريدك الإلكتروني ✅");
+      forgotPasswordForm.style.display = "none";
+      verifyCodeForm.style.display = "grid";
+    });
+  }
+
+  if (verifyCodeForm) {
+    verifyCodeForm.addEventListener("submit", e => {
+      e.preventDefault();
+      const codeInput = document.getElementById("verificationCode").value.trim();
+      if (codeInput === generatedCode) {
+        alert("✅ تم التحقق من الكود بنجاح");
+        verifyCodeForm.style.display = "none";
+        resetPasswordForm.style.display = "grid";
+      } else {
+        alert("❌ الكود غير صحيح");
+      }
+    });
+  }
+
+  if (resetPasswordForm) {
+    resetPasswordForm.addEventListener("submit", e => {
+      e.preventDefault();
+      const pass = document.getElementById("newPassword").value.trim();
+      const confirmPass = document.getElementById("confirmNewPassword").value.trim();
+
+      if (pass.length < 6) return alert("كلمة المرور يجب أن تكون على الأقل 6 أحرف");
+      if (pass !== confirmPass) return alert("كلمة المرور غير متطابقة");
+
+      alert("✅ تم تغيير كلمة المرور بنجاح");
+      resetPasswordForm.reset();
+      showSection(loginSection); // رجوع لصفحة تسجيل الدخول
+    });
+  }
+
+  // ==================== القائمة الجانبية ====================
+  const menu      = document.querySelector('.buttomsmallscreen');
+  const iconMenu  = document.querySelector('.iconmenu');
+  if (iconMenu && menu && closeBtn) {
+    iconMenu.addEventListener('click', () => menu.classList.add('active'));
+    closeBtn.addEventListener('click', () => menu.classList.remove('active'));
+  }
+
+  // ==================== البحث ====================
+  const btnSearch   = document.querySelector('.btnsearch');
+  const searchBox   = document.querySelector('.search-box');
+  const closeSearch = document.querySelector('.close-search');
+
+  if (btnSearch && searchBox && closeSearch) {
+    btnSearch.addEventListener('click', () => searchBox.style.display = 'flex');
+    closeSearch.addEventListener('click', () => searchBox.style.display = 'none');
+  }
+
+  // ==================== عرض المزيد للكروت ====================
+  const cards = document.querySelectorAll(".card-courses");
+  const toggleButton = document.getElementById("toggleCards");
+  if (cards.length && toggleButton) {
+    let showingAll = false;
+    cards.forEach((card, index) => { if (index > 2) card.classList.add("hidden"); });
+
+    toggleButton.addEventListener("click", () => {
+      showingAll = !showingAll;
+      if (showingAll) {
+        cards.forEach(card => card.classList.remove("hidden"));
+        toggleButton.textContent = "عرض أقل";
+      } else {
+        cards.forEach((card, index) => { if (index > 2) card.classList.add("hidden"); });
+        toggleButton.textContent = "عرض المزيد";
+      }
+    });
+  }
+
+  // ==================== Dark Mode ====================
+  const toggleDark   = document.getElementById("darkToggle");
+  const circleIcon   = toggleDark?.querySelector(".toggle-circle");
+
+  if (toggleDark && circleIcon) {
+    toggleDark.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggleDark.classList.toggle("active");
+      if (document.body.classList.contains("dark")) {
+        circleIcon.innerHTML = `<i class="fas fa-moon"></i>`;
+        toggleDark.classList.add("dark-btn");
+      } else {
+        circleIcon.innerHTML = `<i class="fas fa-sun"></i>`;
+        toggleDark.classList.remove("dark-btn");
+      }
     });
   }
 });
+
+
+
+
