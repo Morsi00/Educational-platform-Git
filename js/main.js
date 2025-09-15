@@ -81,23 +81,25 @@ document.addEventListener("DOMContentLoaded", () => {
   // اربط كل فورم مع التحقق
   Object.values(forms).forEach((form) => {
     if (!form) return;
+    form.dataset.submitted = "false"; // ✅ flag مبدئي
     attachLiveValidation(form);
     form.addEventListener("submit", (e) => {
       e.preventDefault();
+      form.dataset.submitted = "true"; // ✅ خلي الفورم في حالة submitted
       if (validateForm(form)) form.submit();
     });
   });
 });
 
-
 // ✅ تحقق مباشر لكل input و select
 function attachLiveValidation(form) {
   form.querySelectorAll("input, select").forEach((field) => {
-    field.addEventListener("blur", () => validateSingleField(field));
+    field.addEventListener("blur", () => {
+      if (form.dataset.submitted === "true") validateSingleField(field); 
+    });
     field.addEventListener("input", () => clearError(getErrorSpan(field)));
   });
 }
-
 
 // ✅ دوال التحقق الأساسية
 const isArabicText = (v) => /^[\u0600-\u06FF\s]+$/.test(v.trim());
@@ -112,7 +114,6 @@ function getErrorSpan(input) {
   return input.closest("div").parentElement.querySelector(".error-msg");
 }
 
-
 // ✅ دالة عامة للتحقق من حقل واحد
 function validateSingleField(input) {
   const value = input.value.trim();
@@ -124,11 +125,10 @@ function validateSingleField(input) {
     if (!isArabicText(value)) return showError(errorSpan, "أدخل الاسم باللغة العربية فقط"), false;
   }
 
-if (input.type === "tel") {
-  if (!value) return showError(errorSpan, "رقم الهاتف مطلوب"), false;
-  if (!isNumeric(value)) return showError(errorSpan, "أدخل رقم صحيح يبدأ بـ 01 ويكون مكون من 11 رقم"), false;
-}
-
+  if (input.type === "tel") {
+    if (!value) return showError(errorSpan, "رقم الهاتف مطلوب"), false;
+    if (!isNumeric(value)) return showError(errorSpan, "أدخل رقم صحيح يبدأ بـ 01 ويكون مكون من 11 رقم"), false;
+  }
 
   if (input.type === "email") {
     if (!value) return showError(errorSpan, "البريد الإلكتروني مطلوب"), false;
@@ -153,7 +153,6 @@ if (input.type === "tel") {
   return true;
 }
 
-
 // ✅ دالة عامة للتحقق من كل الفورم
 function validateForm(form) {
   let isValid = true;
@@ -163,15 +162,97 @@ function validateForm(form) {
   return isValid;
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const loginLinks = document.querySelectorAll(".subtitle_link_login_as_user");
+  const loginForm = document.querySelector(".Login_page"); // لو ده ID خليه #Login_page
+
+  // كل الصفحات اللي ممكن تكون ظاهرة
+  const allSections = document.querySelectorAll(
+    ".page_home1_m, .Student_registration_page_m, .loginaspartient_page, .form_login_m, .teacher_page_m"
+  );
+
+  if (loginLinks.length && loginForm) {
+    loginLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // اخفي كل الصفحات المعروضة
+        allSections.forEach((sec) => (sec.style.display = "none"));
+
+        // اظهر صفحة تسجيل الدخول فقط
+        loginForm.style.display = "block";
+      });
+    });
+  }
+});
 
 
+document.addEventListener("DOMContentLoaded", () => {
+  const loginLinks = document.querySelectorAll("#link_create_m");
+  const loginForm = document.querySelector(".Student_registration_page_m"); // لو ده ID خليه #Login_page
+
+  // كل الصفحات اللي ممكن تكون ظاهرة
+  const allSections = document.querySelectorAll(
+    ".page_home1_m,.loginaspartient_page, .form_login_m, .teacher_page_m ,.Login_page"
+  );
+
+  if (loginLinks.length && loginForm) {
+    loginLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // اخفي كل الصفحات المعروضة
+        allSections.forEach((sec) => (sec.style.display = "none"));
+
+        // اظهر صفحة تسجيل الدخول فقط
+        loginForm.style.display = "block";
+      });
+    });
+  }
+});
 
 
+// ------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const alsaf = document.getElementById("alsaf");
+  const shuebaDiv = document.querySelector(".shueba");
+  const shuebaSelect = document.getElementById("shueba");
 
+  // إخفاء الشعبة في البداية
+  shuebaDiv.style.display = "none";
 
+  alsaf.addEventListener("change", () => {
+    const value = alsaf.value;
 
-// -------------------------------------------------------------
-// teacher
-
-
+    if (value === "1") {
+      // الصف الأول الثانوي → إخفاء الشعبة
+      shuebaDiv.style.display = "none";
+      shuebaSelect.value = "";
+    } 
+    else if (value === "2") {
+      // الصف الثاني الثانوي → إظهار علمي وأدبي فقط
+      shuebaDiv.style.display = "block";
+      Array.from(shuebaSelect.options).forEach(opt => {
+        if (["science", "arts"].includes(opt.value) || opt.value === "") {
+          opt.style.display = "block";
+        } else {
+          opt.style.display = "none";
+        }
+      });
+      shuebaSelect.value = "";
+    } 
+    else if (value === "3") {
+      // الصف الثالث الثانوي → إظهار علمي علوم، علمي رياضة، أدبي فقط
+      shuebaDiv.style.display = "block";
+      Array.from(shuebaSelect.options).forEach(opt => {
+        if (["science-sc", "science-ma", "arts"].includes(opt.value) || opt.value === "") {
+          opt.style.display = "block";
+        } else {
+          opt.style.display = "none";
+        }
+      });
+      shuebaSelect.value = "";
+    }
+  });
+});
 
