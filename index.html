@@ -116,7 +116,7 @@
   <!-- End Navbar -->
   <Section class="page_home1_m">
     <!-- Start section1 (photo and text) -->
-    <div class="section1  text-center ">
+    <div class="section1  text-center " id="homePage">
 
       <!-- النص -->
       <div class="text">
@@ -158,7 +158,7 @@
           <div class="swiper-wrapper ">
 
             <div class="swiper-slide">
-              <div class="card">
+              <div class="card" >
                 <div class="p-2 imgs">
                   <img class=" " src="./imgs/7db3c2974f23463c4699b9a8b8e56ff62b865494.jpg" alt="">
                 </div>
@@ -349,7 +349,7 @@
 
 
     <!-- Start subscrip -->
-    <div class="thebest text-center " style="margin: 20px 0 70px; padding:0px 30px;">
+    <div class="thebest text-center " id="coursesPage" style="margin: 20px 0 70px; padding:0px 30px;">
 
       <h1> <span style="color: #0ea5e9;">كورساتنا</span>المٌقترحة</h1>
       <p>ريحنا دماغك وجمعنا لك كورسات على مزاجك، مختارة بحب وعناية كأننا بنعمل شوبينج لأحسن شوية كورسات تساعدك وتنميك!
@@ -915,7 +915,7 @@
 
 
     <!-- ==========  Start FAQ = Frequently Asked Questions (الأسئلة الشائعة).========== -->
-    <section class="faq-section mt-5">
+    <section class="faq-section mt-5" id="FAQ">
       <div class="container">
         <h2 class="faq-title">الأسئلة الشائعة</h2>
         <p class="faq-subtitle">هنا هتلاقي إجابات لأكثر الأسئلة شيوعًا عن منصتنا وخدماتنا</p>
@@ -990,7 +990,7 @@
 
 
     <!-- Start join to drosk -->
-    <section class="join-teacher">
+    <section class="join-teacher" id="joinTeacherPage">
       <div class="container">
         <div class="image">
           <img src="./imgs/Teacher3.jpeg" alt="Teacher Invitation">
@@ -1023,12 +1023,12 @@
 
         <div class="footer-links">
           <h4>روابط سريعة</h4>
-          <ul>
-            <li><a href="#">الرئيسية</a></li>
-            <li><a href="#">الكورسات</a></li>
-            <li><a href="#">انضم كمدرس</a></li>
-            <li><a href="#">تواصل معنا</a></li>
-          </ul>
+<ul class="nav-links">
+  <li><a href="#homePage">الرئيسية</a></li>
+  <li><a href="#coursesPage">الكورسات</a></li>
+  <li><a href="#joinTeacherPage">انضم كمدرس</a></li>
+  <li><a href="#FAQ">تواصل معنا</a></li>
+</ul>
         </div>
 
         <div class="footer-social">
@@ -1051,213 +1051,215 @@
 
   <!-- Font Awesome (icons) -->
 
-<section class="Student_registration_page_m " style="display:none;">
+  <section class="Student_registration_page_m " style="display:none;">
 
-  <!-- Start Form -->
-  <div class="form-container">
-    <h2><b>طلب انشاء حساب :</b></h2>
-    <p class="subtitle">
-      ادخل بياناتك بشكل صحيح وسيتم التواصل معك خلال ساعات قليلة لتفعيل الحساب!<br>
-      يوجد لديك حساب بالفعل؟ <span>ادخل إلى حسابك الآن!</span>
-    </p>
+    <!-- Start Form -->
+    <div class="form-container">
+      <h2><b>طلب انشاء حساب :</b></h2>
+      <p class="subtitle">
+        ادخل بياناتك بشكل صحيح وسيتم التواصل معك خلال ساعات قليلة لتفعيل الحساب!<br>
+        يوجد لديك حساب بالفعل؟ <span> <a href="" class="subtitle_link_login_as_user">ادخل إلى حسابك الآن!</a> </span>
+      </p>
 
-    <form class="grid-form" id="registerForm">
+      <form class="grid-form" id="registerForm">
 
-      <!-- الاسم الأول -->
-      <div class="form-group">
-        <div style="position: relative;">
-          <input type="text" required placeholder=" ">
-          <label><i class="fa-solid fa-user"></i> الاسم الأول</label>
-          <span class="bg-anim"></span>
+        <!-- الاسم الأول -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-user"></i> الاسم الأول</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- الاسم الثاني -->
-      <div class="form-group">
-        <div style="position: relative;">
-          <input type="text" required placeholder=" ">
-          <label><i class="fa-solid fa-user"></i> الاسم الثاني</label>
-          <span class="bg-anim"></span>
+        <!-- الاسم الثاني -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-user"></i> الاسم الثاني</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- الاسم الثالث -->
-      <div class="form-group">
-        <div style="position: relative;">
-          <input type="text" required placeholder=" ">
-          <label><i class="fa-solid fa-user"></i> الاسم الثالث</label>
-          <span class="bg-anim"></span>
+        <!-- الاسم الثالث -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-user"></i> الاسم الثالث</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- الاسم الأخير -->
-      <div class="form-group">
-        <div style="position: relative;">
-          <input type="text" required placeholder=" ">
-          <label><i class="fa-solid fa-user"></i> الاسم الأخير</label>
-          <span class="bg-anim"></span>
+        <!-- الاسم الأخير -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-user"></i> الاسم الأخير</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- هاتف الطالب -->
-      <div class="form-group full-width">
-        <div style="position: relative;">
-          <input type="tel" id="student-phone" required placeholder=" ">
-          <label><i class="fa-solid fa-phone"></i> هاتف الطالب</label>
-          <span class="bg-anim"></span>
+        <!-- هاتف الطالب -->
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="tel" id="student-phone" required placeholder=" ">
+            <label><i class="fa-solid fa-phone"></i> هاتف الطالب</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- رقم هاتف الأب -->
-      <div class="form-group">
-        <div style="position: relative;">
-          <input type="tel" required placeholder=" ">
-          <label><i class="fa-solid fa-phone"></i> رقم هاتف الأب</label>
-          <span class="bg-anim"></span>
+        <!-- رقم هاتف الأب -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="tel" required placeholder=" ">
+            <label><i class="fa-solid fa-phone"></i> رقم هاتف الأب</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- رقم هاتف الأم -->
-      <div class="form-group">
-        <div style="position: relative;">
-          <input type="tel" required placeholder=" ">
-          <label><i class="fa-solid fa-phone"></i> رقم هاتف الأم</label>
-          <span class="bg-anim"></span>
+        <!-- رقم هاتف الأم -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="tel" required placeholder=" ">
+            <label><i class="fa-solid fa-phone"></i> رقم هاتف الأم</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- مهنة ولي الأمر -->
-      <div class="form-group">
-        <div style="position: relative;">
-          <input type="text" required placeholder=" ">
-          <label><i class="fa-solid fa-briefcase"></i> مهنة ولي الأمر</label>
-          <span class="bg-anim"></span>
+        <!-- مهنة ولي الأمر -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-briefcase"></i> مهنة ولي الأمر</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- اسم المدرسة -->
-      <div class="form-group">
-        <div style="position: relative;">
-          <input type="text" required placeholder=" ">
-          <label><i class="fa-solid fa-school"></i> اسم المدرسة</label>
-          <span class="bg-anim"></span>
+        <!-- اسم المدرسة -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-school"></i> اسم المدرسة</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- المحافظة -->
-      <div class="form-group form-group1">
-        <div style="position: relative;">
-          <select id="governorate" required>
-            <option value="" disabled selected hidden></option>
-            <option value="القاهرة">القاهرة</option>
-            <option value="الجيزة">الجيزة</option>
-          </select>
-          <label><i class="fa-solid fa-map-location-dot"></i> المحافظة</label>
-          <span class="bg-anim"></span>
+        <!-- المحافظة -->
+        <div class="form-group form-group1">
+          <div style="position: relative;">
+            <select id="governorate" required>
+              <option value="" disabled selected hidden></option>
+              <option value="القاهرة">القاهرة</option>
+              <option value="الجيزة">الجيزة</option>
+            </select>
+            <label><i class="fa-solid fa-map-location-dot"></i> المحافظة</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- الإدارة -->
-      <div class="form-group form-group1">
-        <div style="position: relative;">
-          <select id="admin" required>
-            <option value="" disabled selected hidden></option>
-            <option value="قسم 1">قسم 1</option>
-            <option value="قسم 2">قسم 2</option>
-          </select>
-          <label><i class="fa-solid fa-building"></i> الإدارة</label>
-          <span class="bg-anim"></span>
+        <!-- الإدارة -->
+        <div class="form-group form-group1">
+          <div style="position: relative;">
+            <select id="admin" required>
+              <option value="" disabled selected hidden></option>
+              <option value="قسم 1">قسم 1</option>
+              <option value="قسم 2">قسم 2</option>
+            </select>
+            <label><i class="fa-solid fa-building"></i> الإدارة</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- البريد الإلكتروني -->
-      <div class="form-group full-width">
-        <div style="position: relative;">
-          <input type="email" id="email" required placeholder=" ">
-          <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
-          <span class="bg-anim"></span>
+        <!-- البريد الإلكتروني -->
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="email" id="email" required placeholder=" ">
+            <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
 
-      <!-- كلمة المرور -->
-      <div class="form-group password-group">
-        <div style="position: relative;">
-          <input type="password" id="password" required placeholder=" ">
-          <label><i class="fa-solid fa-lock"></i> كلمة المرور</label>
-          <span class="bg-anim"></span>
+        <!-- كلمة المرور -->
+        <div class="form-group password-group">
+          <div style="position: relative;">
+            <input type="password" id="password" required placeholder=" ">
+            <label><i class="fa-solid fa-lock"></i> كلمة المرور</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- تأكيد كلمة المرور -->
-      <div class="form-group password-group">
-        <div style="position: relative;">
-          <input type="password" id="confirm-password" required placeholder=" ">
-          <label><i class="fa-solid fa-lock"></i> تأكيد كلمة المرور</label>
-          <span class="bg-anim"></span>
+        <!-- تأكيد كلمة المرور -->
+        <div class="form-group password-group">
+          <div style="position: relative;">
+            <input type="password" id="confirm-password" required placeholder=" ">
+            <label><i class="fa-solid fa-lock"></i> تأكيد كلمة المرور</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
-      <!-- الشعبة -->
-      <div class="form-group form-group1 full-width">
-        <div style="position: relative;">
-          <select id="specialization" required>
-            <option value="" disabled selected hidden></option>
-            <option value="science">الصف الاول الثانوي</option>
-            <option value="arts">الصف الثاني الثانوي </option>
-            <option value="math">الصف الثالث الثانوي</option>
-          </select>
-          <label><i class="fa-solid fa-book"></i> الصف الدراسي </label>
-          <span class="bg-anim"></span>
+        <!-- الصف الدراسي -->
+        <div class="alsaf form-group form-group1 full-width">
+          <div style="position: relative;">
+            <select id="alsaf" required>
+              <option value="" disabled selected hidden></option>
+              <option value="1">الصف الاول الثانوي</option>
+              <option value="2">الصف الثاني الثانوي</option>
+              <option value="3">الصف الثالث الثانوي</option>
+            </select>
+            <label><i class="fa-solid fa-book"></i> الصف الدراسي </label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- الشعبة -->
-      <div class="form-group form-group1 full-width">
-        <div style="position: relative;">
-          <select id="specialization" required>
-            <option value="" disabled selected hidden></option>
-            <option value="science">علمي</option>
-            <option value="arts">أدبي</option>
-            <option value="math">رياضة</option>
-          </select>
-          <label><i class="fa-solid fa-book"></i> الشعبة</label>
-          <span class="bg-anim"></span>
+        <!-- الشعبة -->
+        <div class="shueba form-group form-group1 full-width">
+          <div style="position: relative;">
+            <select id="shueba">
+              <option value="" disabled selected hidden></option>
+              <option value="science">علمي</option>
+              <option value="arts">أدبي</option>
+              <option value="math">رياضة</option>
+              <option value="science-sc">علمي علوم </option>
+
+              <option value="science-ma">علمي رياضة</option>
+
+            </select>
+            <label><i class="fa-solid fa-book"></i> الشعبة</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
         </div>
-        <span class="error-msg"></span>
-      </div>
 
-      <!-- زرار تسجيل -->
-      <button class="submit-student" type="submit"><i class="fa-solid fa-user-plus"></i> إنشاء الحساب</button>
+        <!-- زرار تسجيل -->
+        <button class="submit-student" type="submit"><i class="fa-solid fa-user-plus"></i> إنشاء الحساب</button>
 
-    </form>
+      </form>
 
-    <p class="subtitle">
-      يوجد لديك حساب بالفعل؟ <span>ادخل إلى حسابك الآن!</span>
-    </p>
 
-  </div>
-</section>
+
+    </div>
+  </section>
 
 
 
 
   <Section class="Login_page" style="display:none;">
-    
+
 
     <div class="form-container">
       <h2><b>تسجيل الدخول</b></h2>
@@ -1268,54 +1270,51 @@
         ادخل على حسابك بادخال رقم الهاتف و كلمة المرور المسجل بهم من قبل
 
       </p>
-      <p>لا يوجد لديك حساب؟
-        انشئ حسابك الآن !</p>
-
-
+      <span>لا يوجد لديك حساب؟</span>
+      <a href="#" id="link_create_m">انشئ حسابك الآن!</a>
+      <br>
 
 
 
       <!-- الحقول -->
-<form id="form_login_m">
-  <!-- البريد الإلكتروني -->
-  <div class="form-group">
-    <div style="position: relative;">
-      <input type="email" id="email" required placeholder=" ">
-      <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
+      <form id="form_login_m">
+        <!-- البريد الإلكتروني -->
+        <div class="form-group mt-3">
+          <div style="position: relative;">
+            <input type="email" id="email" required placeholder=" ">
+            <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
 
-  <!-- كلمة المرور -->
-  <div class="form-group password-group">
-    <div style="position: relative;">
-      <input type="password" id="password" required placeholder=" ">
-      <label><i class="fa-solid fa-lock"></i> كلمة المرور</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
+        <!-- كلمة المرور -->
+        <div class="form-group password-group mt-3 mb-3">
+          <div style="position: relative;">
+            <input type="password" id="password" required placeholder=" ">
+            <label><i class="fa-solid fa-lock"></i> كلمة المرور</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
 
-  <!-- تسجيل بالكود -->
-  <div class="alt_login_m">
+        <!-- تسجيل بالكود -->
+        <!-- <div class="alt_login_m">
     <label class="switch_toggle_m">
       <input type="checkbox" class="checkbox_toggle_m">
       <span class="slider_toggle_m"></span>
     </label>
     <span>أو قم بتسجيل الدخول عن طريق الكود</span>
-  </div>
+  </div> -->
 
-  <div class="links_section_m">
-    <span>لا يوجد لديك حساب؟</span>
-    <a href="#" id="link_create_m">انشئ حسابك الآن!</a>
-    <br>
-    <span>هل نسيت كلمة السر؟</span>
-    <a href="#" id="link_forgot_m">اضغط هنا</a>
-  </div>
+        <div class="links_section_m">
 
-  <button type="submit_login" class="btn_login_m">تسجيل الدخول</button>
-</form>
+          <span>هل نسيت كلمة السر؟</span>
+          <a href="#" id="link_forgot_m">اضغط هنا</a>
+        </div>
+
+        <button type="submit_login" class="btn_login_m">تسجيل الدخول</button>
+      </form>
 
     </div>
 
@@ -1331,86 +1330,83 @@
       <h2><b>تسجيل ولي الأمر :</b></h2>
       <p class="subtitle">
         ادخل بياناتك بشكل صحيح وسيتم تفعيل الحساب فوراً!<br>
-        لديك حساب بالفعل؟ <span>ادخل إلى حسابك الآن!</span>
+        لديك حساب بالفعل؟ <span> <a href="" class="subtitle_link_login_as_user">ادخل إلى حسابك الآن!</a> </span>
       </p>
 
-  <form class="grid-form" id="parentRegisterForm">
-  <!-- الاسم الأول -->
-  <div class="form-group">
-    <div style="position: relative;">
-      <input type="text" required placeholder=" ">
-      <label><i class="fa-solid fa-user"></i> الاسم الأول</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
+      <form class="grid-form" id="parentRegisterForm">
+        <!-- الاسم الأول -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-user"></i> الاسم الأول</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
 
-  <!-- الاسم الأخير -->
-  <div class="form-group">
-    <div style="position: relative;">
-      <input type="text" required placeholder=" ">
-      <label><i class="fa-solid fa-user"></i> الاسم الأخير</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
+        <!-- الاسم الأخير -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-user"></i> الاسم الأخير</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
 
-  <!-- هاتف ولي الأمر -->
-  <div class="form-group full-width">
-    <div style="position: relative;">
-      <input type="tel" required placeholder=" ">
-      <label><i class="fa-solid fa-phone"></i> هاتف ولي الأمر</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
+        <!-- هاتف ولي الأمر -->
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="tel" required placeholder=" ">
+            <label><i class="fa-solid fa-phone"></i> هاتف ولي الأمر</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
 
-  <!-- البريد الإلكتروني -->
-  <div class="form-group full-width">
-    <div style="position: relative;">
-      <input type="email" required placeholder=" ">
-      <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
+        <!-- البريد الإلكتروني -->
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="email" required placeholder=" ">
+            <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
 
-  <!-- كلمة المرور -->
-  <div class="form-group password-group">
-    <div style="position: relative;">
-      <input type="password" required placeholder=" ">
-      <label><i class="fa-solid fa-lock"></i> كلمة المرور</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
+        <!-- كلمة المرور -->
+        <div class="form-group password-group">
+          <div style="position: relative;">
+            <input type="password" required placeholder=" ">
+            <label><i class="fa-solid fa-lock"></i> كلمة المرور</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
 
-  <!-- تأكيد كلمة المرور -->
-  <div class="form-group password-group">
-    <div style="position: relative;">
-      <input type="password" required placeholder=" ">
-      <label><i class="fa-solid fa-lock"></i> تأكيد كلمة المرور</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
+        <!-- تأكيد كلمة المرور -->
+        <div class="form-group password-group">
+          <div style="position: relative;">
+            <input type="password" required placeholder=" ">
+            <label><i class="fa-solid fa-lock"></i> تأكيد كلمة المرور</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
 
-  <!-- زرار تسجيل -->
-  <button class="submit-Parent" type="submit">
-    <i class="fa-solid fa-user-plus"></i> إنشاء الحساب
-  </button>
-</form>
+        <!-- زرار تسجيل -->
+        <button class="submit-Parent" type="submit">
+          <i class="fa-solid fa-user-plus"></i> إنشاء الحساب
+        </button>
+      </form>
 
-      <p class="subtitle">
-        لديك حساب بالفعل؟ <span>ادخل إلى حسابك الآن!</span>
-      </p>
+
     </div>
 
 
 
 
   </section>
-
 
   <section class="Teacher_registration_page_m" style="display: none;">
     <div class="form-container">
@@ -1419,137 +1415,191 @@
         ادخل بياناتك الشخصية والخبرات والروابط الخاصة بك.<br>
         لديك حساب بالفعل؟ <span>ادخل إلى حسابك الآن!</span>
       </p>
-<form class="grid-form" id="teacherRegisterForm">
 
-  <!-- الاسم الأول -->
-  <div class="form-group">
-    <div style="position: relative;">
-      <input type="text" required placeholder=" ">
-      <label><i class="fa-solid fa-user"></i> الاسم الأول</label>
-      <span class="bg-anim"></span>
+      <form class="grid-form" id="teacherRegisterForm">
+
+        <!-- الاسم الأول -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-user"></i> الاسم الأول</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
+
+        <!-- الاسم الثاني -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-user"></i> الاسم الثاني</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
+
+        <!-- الاسم الثالث -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-user"></i> الاسم الثالث</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
+
+        <!-- الاسم الأخير -->
+        <div class="form-group">
+          <div style="position: relative;">
+            <input type="text" required placeholder=" ">
+            <label><i class="fa-solid fa-user"></i> الاسم الأخير</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
+
+        <!-- رقم الهاتف -->
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="tel" required placeholder=" ">
+            <label><i class="fa-solid fa-phone"></i> رقم الهاتف</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
+
+
+
+
+        <!-- المادة -->
+        <div class="form-group form-group1 full-width">
+          <div style="position: relative;">
+            <select required>
+              <option value="" disabled selected hidden></option>
+              <option value="arabic">اللغة العربية</option>
+              <option value="english">اللغة الإنجليزية</option>
+              <option value="math">الرياضيات</option>
+              <option value="science">العلوم</option>
+              <option value="physics">الفيزياء</option>
+              <option value="chemistry">الكيمياء</option>
+              <option value="biology">الأحياء</option>
+              <option value="history">التاريخ</option>
+              <option value="geography">الجغرافيا</option>
+              <option value="philosophy">الفلسفة والمنطق</option>
+              <option value="french">اللغة الفرنسية</option>
+              <option value="german">اللغة الألمانية</option>
+            </select>
+            <label><i class="fa-solid fa-book"></i> المادة التخصص</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
+
+        <!-- الصفوف -->
+
+
+
+        <!-- البريد الإلكتروني -->
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="email" placeholder=" ">
+            <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
+            <span class="bg-anim"></span>
+          </div>
+          <span class="error-msg"></span>
+        </div>
+
+        <!-- روابط التواصل الاجتماعي -->
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="url" placeholder=" ">
+            <label><i class="fa-brands fa-facebook"></i> رابط الفيسبوك (اختياري)</label>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="url" placeholder=" ">
+            <label><i class="fa-brands fa-instagram"></i> رابط الإنستجرام (اختياري)</label>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="url" placeholder=" ">
+            <label><i class="fa-solid fa-link"></i> رابط موقعك الشخصي / بورتفوليو / بيهانس (اختياري)</label>
+          </div>
+        </div>
+
+        <!-- زر الانضمام -->
+        <button class="submit_teacher" type="submit">
+          <i class="fa-solid fa-user-plus"></i> انضم الآن
+        </button>
+
+      </form>
     </div>
-    <span class="error-msg"></span>
-  </div>
-
-  <!-- الاسم الثاني -->
-  <div class="form-group">
-    <div style="position: relative;">
-      <input type="text" required placeholder=" ">
-      <label><i class="fa-solid fa-user"></i> الاسم الثاني</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
-
-  <!-- الاسم الثالث -->
-  <div class="form-group">
-    <div style="position: relative;">
-      <input type="text" required placeholder=" ">
-      <label><i class="fa-solid fa-user"></i> الاسم الثالث</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
-
-  <!-- الاسم الأخير -->
-  <div class="form-group">
-    <div style="position: relative;">
-      <input type="text" required placeholder=" ">
-      <label><i class="fa-solid fa-user"></i> الاسم الأخير</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
-
-  <!-- رقم الهاتف -->
-  <div class="form-group full-width">
-    <div style="position: relative;">
-      <input type="tel" required placeholder=" ">
-      <label><i class="fa-solid fa-phone"></i> رقم الهاتف</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
-
-  <!-- الراتب المتوقع -->
-  <div class="form-group full-width">
-    <div style="position: relative;">
-      <input type="number" placeholder=" ">
-      <label><i class="fa-solid fa-money-bill"></i> الراتب المتوقع</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
-
-  <!-- المحافظة -->
-  <div class="form-group full-width">
-    <div style="position: relative;">
-      <input type="text" placeholder=" ">
-      <label><i class="fa-solid fa-map-location-dot"></i> المحافظة</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
-
-  <!-- العنوان -->
-  <div class="form-group full-width">
-    <div style="position: relative;">
-      <input type="text" placeholder=" ">
-      <label><i class="fa-solid fa-location-dot"></i> العنوان</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
-
-  <!-- البريد الإلكتروني -->
-  <div class="form-group full-width">
-    <div style="position: relative;">
-      <input type="email" placeholder=" ">
-      <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
-      <span class="bg-anim"></span>
-    </div>
-    <span class="error-msg"></span>
-  </div>
-
-  <!-- روابط التواصل الاجتماعي -->
-  <div class="form-group full-width">
-    <div style="position: relative;">
-      <input type="url" placeholder=" ">
-      <label><i class="fa-brands fa-facebook"></i> رابط الفيسبوك (اختياري)</label>
-    </div>
-  </div>
-
-  <div class="form-group full-width">
-    <div style="position: relative;">
-      <input type="url" placeholder=" ">
-      <label><i class="fa-brands fa-instagram"></i> رابط الإنستجرام (اختياري)</label>
-    </div>
-  </div>
-
-  <div class="form-group full-width">
-    <div style="position: relative;">
-      <input type="url" placeholder=" ">
-      <label><i class="fa-solid fa-link"></i> رابط موقعك الشخصي / بورتفوليو / بيهانس (اختياري)</label>
-    </div>
-  </div>
-
-  <!-- زر الانضمام -->
-  <button class="submit_teacher" type="submit">
-    <i class="fa-solid fa-user-plus"></i> انضم الآن
-  </button>
-
-</form>
-
-
-    </div>
-
   </section>
+
+
+  <!-- ________________________________password forget ____________________ -->
+  <section class="forget-password-page" style="display:none;">
+    <div class="form-container">
+      <h2 class="subtitle">إعادة تعيين كلمة المرور</h2>
+
+      <!-- إدخال البريد الإلكتروني -->
+      <form id="forgotPasswordForm" class="grid-form">
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="email" id="resetEmail" required placeholder=" ">
+            <label><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</label>
+            <span class="bg-anim"></span>
+          </div>
+        </div>
+        <button type="submit" class="submit-student">إرسال الكود</button>
+      </form>
+
+      <!-- إدخال الكود -->
+      <form id="verifyCodeForm" class="grid-form" style="display:none;">
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="text" id="verificationCode" required placeholder=" ">
+            <label><i class="fa-solid fa-key"></i> أدخل الكود المرسل</label>
+            <span class="bg-anim"></span>
+          </div>
+        </div>
+        <button type="submit" class="submit-student">تأكيد الكود</button>
+      </form>
+
+      <!-- إدخال كلمة المرور الجديدة -->
+      <form id="resetPasswordForm" class="grid-form" style="display:none;">
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="password" id="newPassword" required placeholder=" ">
+            <label><i class="fa-solid fa-lock"></i> كلمة المرور الجديدة</label>
+            <span class="bg-anim"></span>
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <div style="position: relative;">
+            <input type="password" id="confirmNewPassword" required placeholder=" ">
+            <label><i class="fa-solid fa-lock"></i> تأكيد كلمة المرور</label>
+            <span class="bg-anim"></span>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-student">حفظ كلمة المرور</button>
+      </form>
+    </div>
+  </section>
+  <!-- __________________________________________________________ -->
 
   <!-- الزرار الثابت -->
   <button id="goHomeBtn" class="fixed-btn">🏠</button>
 
 
-  <!-- JavaScript الخاص بـ  -->
+
+
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
